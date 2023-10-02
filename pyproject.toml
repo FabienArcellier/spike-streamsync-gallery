@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "blueprint-python3"
+description = "blueprint to implement a python application"
+authors = ["Fabien Arcellier <fabien.arcellier@gmail.com>"]
+license = "MIT"
+version = "1.0.0"
+readme = "README.md"
+packages = [{include = "app", from = "src"}]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Environment :: Console"
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-dotenv = "^1.0.0"
+streamsync = "^0.2.7"
+
+
+
+[tool.poetry.group.dev.dependencies]
+alfred-cli = "^2.1.1"
+mypy = "^1.4.1"
+pytest = "^7.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

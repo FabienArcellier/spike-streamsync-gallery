@@ -1,0 +1,97 @@
+{
+    "metadata": {
+        "streamsync_version": "0.2.7"
+    },
+    "components": {
+        "root": {
+            "id": "root",
+            "type": "root",
+            "content": {
+                "appName": "My App"
+            },
+            "parentId": null,
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "c0f99a9e-5004-4e75-a6c6-36f17490b134": {
+            "id": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "type": "page",
+            "content": {
+                "pageMode": "compact",
+                "emptinessColor": "#e9eef1"
+            },
+            "parentId": "root",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "3hibwzsscbfgbxje": {
+            "id": "3hibwzsscbfgbxje",
+            "type": "section",
+            "content": {
+                "title": "Gallery",
+                "snapMode": "no",
+                "cssClasses": ""
+            },
+            "parentId": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "psvzf4040hyb6q8n": {
+            "id": "psvzf4040hyb6q8n",
+            "type": "image",
+            "content": {
+                "src": "@{image.url}",
+                "caption": "@{image.caption}",
+                "maxWidth": "600",
+                "cssClasses": "w-100 h-640 f-column f-center "
+            },
+            "parentId": "3hibwzsscbfgbxje",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "phzk841zzq53rnld": {
+            "id": "phzk841zzq53rnld",
+            "type": "columns",
+            "content": {
+                "cssClasses": "f-center"
+            },
+            "parentId": "3hibwzsscbfgbxje",
+            "position": 1,
+            "handlers": {},
+            "visible": true
+        },
+        "h37y5g7t3qrj03ru": {
+            "id": "h37y5g7t3qrj03ru",
+            "type": "repeater",
+            "content": {
+                "keyVariable": "itemId",
+                "valueVariable": "item",
+                "repeaterObject": "@{images}"
+            },
+            "parentId": "phzk841zzq53rnld",
+            "position": 0,
+            "visible": true
+        },
+        "q6g4tsivhufy1zf9": {
+            "id": "q6g4tsivhufy1zf9",
+            "type": "image",
+            "content": {
+                "caption": "",
+                "src": "@{item.url}",
+                "maxWidth": "100",
+                "maxHeight": "100",
+                "cssClasses": "h-100"
+            },
+            "parentId": "h37y5g7t3qrj03ru",
+            "position": 0,
+            "handlers": {
+                "ss-click": "click_img"
+            },
+            "visible": true
+        }
+    }
+}
